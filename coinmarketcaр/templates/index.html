@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alecry</title>
+    <link rel="icon" href="{{ url_for('static', filename='whale.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Характеристика криптовалют</h1>
+        <form id="cryptoForm">
+            <input type="text" id="symbol" placeholder="Введите символ криптовалюты (например, BTC, ETH)">
+            <input type="text" id="currency" placeholder="Введите валюту (например, USD, EUR)">
+            <button type="submit">Получить данные</button>
+        </form>
+        <div id="outputData">
+            <h2>Результат:</h2>
+            <p id="response"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
